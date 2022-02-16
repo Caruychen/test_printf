@@ -6,7 +6,7 @@
 #    By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:19:44 by cchen             #+#    #+#              #
-#    Updated: 2022/02/16 11:42:01 by cchen            ###   ########.fr        #
+#    Updated: 2022/02/16 11:51:56 by cchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FT_PRINTF := libftprintf.a
 CC := gcc
 CFLAGS := -Wall -Werror -Wextra
 INCLUDES := -I$(PRINTF_DIR)/libft -I$(PRINTF_DIR)/includes
-LIB := -L$(PRINTF_DIR) -lftprintf
+LIB :=  -L$(PRINTF_DIR) -lftprintf
 
 SRC_DIR := ./src
 SRC := $(shell find $(SRC_DIR) -type f | grep -E "\.c$$")
@@ -28,7 +28,6 @@ all: $(NAME)
 
 $(NAME):
 	$(MAKE) -C $(PRINTF_DIR)
-	echo $(INCLUDES)
 	$(CC) $(CFLAGS) $(INCLUDES) $(LIB) $(SRC) -o $@
 
 clean:
