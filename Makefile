@@ -6,7 +6,7 @@
 #    By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:19:44 by cchen             #+#    #+#              #
-#    Updated: 2022/02/16 11:51:56 by cchen            ###   ########.fr        #
+#    Updated: 2022/02/16 12:58:11 by cchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC := $(shell find $(SRC_DIR) -type f | grep -E "\.c$$")
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRC)
 	$(MAKE) -C $(PRINTF_DIR)
 	$(CC) $(CFLAGS) $(INCLUDES) $(LIB) $(SRC) -o $@
 
