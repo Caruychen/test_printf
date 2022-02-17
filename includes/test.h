@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 11:17:11 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/17 14:36:52 by cchen            ###   ########.fr       */
+/*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
+/*   Updated: 2022/02/17 14:37:01 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#ifndef TEST_H
+# define TEST_H
 
-int	main(void)
-{
-	test_basic();
-	return (0);
-}
+# include "ft_printf.h"
+# include <stdio.h>
+
+int	test_basic(void);
+
+#endif
