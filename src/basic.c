@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/17 15:02:37 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/18 11:44:21 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,30 @@ void	test_numbers(void)
 
 	for (int i = 0; i < 5; i++)
 	{
-		ft_printf("d conversion: %d\n", n[i]);
-		printf("d conversion: %d\n", n[i]);
+		ft_printf("ft_printf d conversion:\t%d\n", n[i]);
+		printf("printf d conversion:\t%d\n", n[i]);
 
-		ft_printf("i conversion: %i\n", n[i]);
-		printf("i conversion: %i\n", n[i]);
+		ft_printf("ft_printf i conversion:\t%i\n", n[i]);
+		printf("printf i conversion:\t%i\n", n[i]);
 
-		ft_printf("o conversion: %o\n", n[i]);
-		printf("o conversion: %o\n", n[i]);
+		ft_printf("ft_printf o conversion:\t%o\n", n[i]);
+		printf("printf o conversion:\t%o\n", n[i]);
 
-		ft_printf("u conversion: %u\n", n[i]);
-		printf("u conversion: %u\n", n[i]);
+		ft_printf("ft_printf u conversion:\t%u\n", n[i]);
+		printf("printf u conversion:\t%u\n", n[i]);
 
-		ft_printf("x conversion: %x\n", n[i]);
-		printf("x conversion: %x\n", n[i]);
+		ft_printf("ft_printf x conversion:\t%x\n", n[i]);
+		printf("printf x conversion:\t%x\n", n[i]);
 
-		ft_printf("X conversion: %X\n", n[i]);
-		printf("X conversion: %X\n", n[i]);
+		ft_printf("ft_printf X conversion:\t%X\n", n[i]);
+		printf("printf X conversion:\t%X\n", n[i]);
 	}
+
+	ft_printf("ft_printf conversion\t%p\n", NULL);
+	printf("printf conversion\t%p\n", NULL);
+
+	ft_printf("ft_printf conversion\t%p\n", n);
+	printf("printf conversion\t%p\n", n);
 }
 
 int	test_basic(void)
