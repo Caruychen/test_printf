@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/18 15:30:46 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 15:50:27 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ int	test_basic(void)
 	specs_two_str("2 String args: %s, %s\n", "s1", "s2");
 
 	test_numbers();
+
+	ft_printf("hello %c %s %d\n", 'c', "monsieur", 42);
 	return (0);
 }
