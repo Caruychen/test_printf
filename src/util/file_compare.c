@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:01:32 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/21 10:06:17 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 10:52:50 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static void	compare_files(FILE *fp1, FILE *fp2)
 	char	*line2 = NULL;
 	size_t	len1 = 0;
 	size_t	len2 = 0;
-	ssize_t	ret1;
-	ssize_t	ret2;
+	ssize_t	ret1 = 0;
+	ssize_t	ret2 = 0;
 
 	do
 	{
