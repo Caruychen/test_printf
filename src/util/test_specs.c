@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:53:30 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/18 16:52:48 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 10:16:12 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@
 
 void	specs_none(const char *format)
 {
+	int	file_desc;
+	int	copy_out;
+
+	init_redirect(&file_desc, &copy_out);
 	ft_printf(format);
-	printf(format, 'c');
+	reset_output(&copy_out);
+	vdprintf_wrap(format);
+	run_compare();
 }
 
 void	specs_one_char(const char *format, const char c)
