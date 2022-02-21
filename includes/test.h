@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/21 10:29:09 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 11:08:24 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@
 # include <fcntl.h>
 
 int		file_open(char *name);
+void	file_remove(void);
 void	vdprintf_wrap(const char *format, ...);
 void	init_redirect(int *file_desc, int *copy_out);
-void	reset_output(int *copy_out);
+void	reset_output(int *file_desc, int *copy_out);
 void	run_compare(void);
 
 int	test_basic(void);

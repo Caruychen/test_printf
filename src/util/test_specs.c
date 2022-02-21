@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:53:30 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/21 10:16:12 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 11:09:06 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ void	specs_none(const char *format)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format);
 	run_compare();
+	file_remove();
 }
 
 void	specs_one_char(const char *format, const char c)
@@ -33,9 +34,10 @@ void	specs_one_char(const char *format, const char c)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format, c);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, c);
 	run_compare();
+	file_remove();
 }
 
 void	specs_two_char(const char *format, const char c1, const char c2)
@@ -45,9 +47,10 @@ void	specs_two_char(const char *format, const char c1, const char c2)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format, c1, c2);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, c1, c2);
 	run_compare();
+	file_remove();
 }
 
 void	specs_one_str(const char *format, const char *s)
@@ -57,9 +60,10 @@ void	specs_one_str(const char *format, const char *s)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format, s);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, s);
 	run_compare();
+	file_remove();
 }
 
 void	specs_two_str(const char *format, const char *s1, const char *s2)
@@ -69,9 +73,10 @@ void	specs_two_str(const char *format, const char *s1, const char *s2)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format, s1, s2);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, s1, s2);
 	run_compare();
+	file_remove();
 }
 
 void	specs_one_int(const char *format, const int n)
@@ -81,9 +86,10 @@ void	specs_one_int(const char *format, const int n)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format, n);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, n);
 	run_compare();
+	file_remove();
 }
 
 void	specs_one_ptr(const char *format, const void *p)
@@ -93,7 +99,8 @@ void	specs_one_ptr(const char *format, const void *p)
 
 	init_redirect(&file_desc, &copy_out);
 	ft_printf(format, p);
-	reset_output(&copy_out);
+	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, p);
 	run_compare();
+	file_remove();
 }

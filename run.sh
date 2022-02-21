@@ -6,7 +6,7 @@
 #    By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 10:07:29 by cchen             #+#    #+#              #
-#    Updated: 2022/02/21 10:20:57 by cchen            ###   ########.fr        #
+#    Updated: 2022/02/21 11:09:20 by cchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,5 +15,4 @@ make re
 
 # Run rest
 ./test_printf
-rm sample_c sample_ft
 

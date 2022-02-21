@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 10:26:41 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/21 10:30:20 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 11:10:00 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,10 @@
 int	file_open(char *name)
 {
 	return (open(name, O_RDWR|O_CREAT|O_TRUNC, 0666));
+}
+
+void	file_remove(void)
+{
+	remove("sample_c");
+	remove("sample_ft");
 }
