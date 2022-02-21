@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:33:08 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/18 15:38:14 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/21 10:29:44 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	init_redirect(int *file_desc, int *copy_out)
 {
-	*file_desc = open("sample_ft", O_RDWR|O_CREAT|O_TRUNC, 0666);
+	*file_desc = file_open("sample_ft");
 	*copy_out = dup(fileno(stdout));
 	dup2(*file_desc, fileno(stdout));
 }
