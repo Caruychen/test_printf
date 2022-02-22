@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/22 15:58:43 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/22 17:06:14 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int	test_basic(void)
 	test_numbers();
 	specs_one_ptr("p conversion\t%p\n", NULL);
 	specs_one_ptr("p conversion\t%p", addr);
+	printf("\n");
 	return (0);
 }

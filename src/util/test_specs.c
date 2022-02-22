@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:53:30 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/22 15:49:38 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/22 17:17:41 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,3 +98,41 @@ void	specs_one_ptr(const char *format, const void *p)
 	vdprintf_wrap(format, p);
 	system("scripts/compare.sh");
 }
+
+void	specs_one_long(const char *format, const long n)
+{
+	int	file_desc;
+	int	copy_out;
+
+	init_redirect(&file_desc, &copy_out);
+	ft_printf(format, n);
+	reset_output(&file_desc, &copy_out);
+	vdprintf_wrap(format, n);
+	system("scripts/compare.sh");
+}
+
+void	specs_one_long_long(const char *format, const long long n)
+{
+	int	file_desc;
+	int	copy_out;
+
+	init_redirect(&file_desc, &copy_out);
+	ft_printf(format, n);
+	reset_output(&file_desc, &copy_out);
+	vdprintf_wrap(format, n);
+	system("scripts/compare.sh");
+}
+
+void	specs_one_short(const char *format, const short n)
+{
+	int	file_desc;
+	int	copy_out;
+
+	init_redirect(&file_desc, &copy_out);
+	ft_printf(format, n);
+	reset_output(&file_desc, &copy_out);
+	vdprintf_wrap(format, n);
+	system("scripts/compare.sh");
+}
+
+

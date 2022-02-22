@@ -11,6 +11,7 @@ COMPARE_FILES(){
 	if [[ -n "$result" ]]
 	then
 		echo -n "${RED}[ NOT OK! ]${NC} "
+		echo $result
 	else
 		echo -n "${GREEN}[ OK! ]${NC} "
 	fi
