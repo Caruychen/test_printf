@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/21 15:50:27 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/22 11:25:16 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,15 @@ void	test_numbers(void)
 
 int	test_basic(void)
 {
-	specs_none("");
+	//specs_none("");
+	//ft_printf("Hello World\n");
 	specs_none("Hello World\n");
-	specs_one_char("1 c conversion: %c\n", 'c');
-	specs_two_char("2 c conversion: %c %c\n", 'a', 'b');
-	specs_one_str("1 String arg: %s\n", "Hello World");
-	specs_two_str("2 String args: %s, %s\n", "s1", "s2");
+	//specs_one_char("1 c conversion: %c\n", 'c');
+	//specs_two_char("2 c conversion: %c %c\n", 'a', 'b');
+	//specs_one_str("1 String arg: %s\n", "Hello World");
+	//specs_two_str("2 String args: %s, %s\n", "s1", "s2");
 
-	test_numbers();
+	//test_numbers();
 
 	ft_printf("hello %c %s %d\n", 'c', "monsieur", 42);
 	return (0);

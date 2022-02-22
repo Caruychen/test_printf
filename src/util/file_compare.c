@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:01:32 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/21 11:06:21 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/22 11:24:39 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@ static void	compare_files(FILE *fp1, FILE *fp2)
 	size_t	len2 = 0;
 	ssize_t	ret1 = 0;
 	ssize_t	ret2 = 0;
-
-	do
+	
+	while ((ret1 = getline(&line1, &len1, fp1)) != -1 &&
+		(ret2 = getline(&line2, &len2, fp2)) != -1)
 	{
-		ret2 = getline(&line2, &len2, fp2);
-		ret1 = getline(&line1, &len1, fp1);
 		if (ret1 != ret2 || strcmp(line1, line2) || len1 != len2)
 		{
 			printf("Error: Printf results differ\n");
@@ -37,7 +36,7 @@ static void	compare_files(FILE *fp1, FILE *fp2)
 			free(line1);
 		if (ret2 != -1)
 			free(line2);
-	} while (ret1 != -1 && ret2 != -1);
+	}
 }
 
 void	run_compare(void)
