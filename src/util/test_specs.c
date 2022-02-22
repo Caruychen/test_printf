@@ -6,13 +6,14 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:53:30 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/22 11:14:22 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/22 15:49:38 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 #include "ft_printf.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 void	specs_none(const char *format)
 {
@@ -23,8 +24,7 @@ void	specs_none(const char *format)
 	ft_printf(format);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
 
 void	specs_one_char(const char *format, const char c)
@@ -36,8 +36,7 @@ void	specs_one_char(const char *format, const char c)
 	ft_printf(format, c);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, c);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
 
 void	specs_two_char(const char *format, const char c1, const char c2)
@@ -49,8 +48,7 @@ void	specs_two_char(const char *format, const char c1, const char c2)
 	ft_printf(format, c1, c2);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, c1, c2);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
 
 void	specs_one_str(const char *format, const char *s)
@@ -62,8 +60,7 @@ void	specs_one_str(const char *format, const char *s)
 	ft_printf(format, s);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, s);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
 
 void	specs_two_str(const char *format, const char *s1, const char *s2)
@@ -75,8 +72,7 @@ void	specs_two_str(const char *format, const char *s1, const char *s2)
 	ft_printf(format, s1, s2);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, s1, s2);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
 
 void	specs_one_int(const char *format, const int n)
@@ -88,8 +84,7 @@ void	specs_one_int(const char *format, const int n)
 	ft_printf(format, n);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, n);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
 
 void	specs_one_ptr(const char *format, const void *p)
@@ -101,6 +96,5 @@ void	specs_one_ptr(const char *format, const void *p)
 	ft_printf(format, p);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, p);
-	run_compare();
-	file_remove();
+	system("scripts/compare.sh");
 }
