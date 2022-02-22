@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/22 11:25:16 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/22 11:35:41 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	test_basic(void)
 
 	//test_numbers();
 
+	ft_printf("Hello World\n");
 	ft_printf("hello %c %s %d\n", 'c', "monsieur", 42);
 	return (0);
 }
