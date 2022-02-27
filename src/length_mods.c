@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:04:37 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/27 00:17:16 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/27 09:16:58 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ static void	set_format(char *format, char *mod, char *spec)
 
 int	test_flags(void)
 {
-	int	n[] = {-42, -1, 0 , 1, 42};
+	long long	n[] = {LONG_MIN, INT_MIN, SHRT_MIN, CHAR_MIN,
+			-1, 0 , 1, CHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX, UCHAR_MAX, USHRT_MAX, UINT_MAX, ULONG_MAX};
 	char	format[42];
 	char	*mods[] = {"hh","h","l","ll"};
 	char	*specs[] = {"d","i","o","u","x","X"};;
 
-	for (int i = 0; i < 5; i++)
+	printf("Testing length modifiers, on single argument\n");
+	for (int i = 0; i < 15; i++)
 	{
 		format[0] = '\0';
 		for (int m = 0; m < 4; m++)
@@ -45,7 +47,5 @@ int	test_flags(void)
 			}
 		}
 	}
-	printf("\n%llu%llx\n", (unsigned long long) -42, (unsigned long long) -42);
-	ft_printf("%llu%llx\n", (unsigned long long) -42, (unsigned long long) -42);
 	return (0);
 }
