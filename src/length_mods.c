@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:04:37 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/27 09:16:58 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/28 11:45:07 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,14 @@ int	test_flags(void)
 	char	*mods[] = {"hh","h","l","ll"};
 	char	*specs[] = {"d","i","o","u","x","X"};;
 
-	printf("Testing length modifiers, on single argument\n");
+	print_title("--- Length Modifier Tests ---\n");
+	printf("Testing integer conversions with modifers, at all Number limits:\n");
 	for (int i = 0; i < 15; i++)
 	{
+		if (i < 14)
+			printf("Testing on %lld\n", n[i]);
+		else
+			printf("Testing on %llu\n", n[i]);
 		format[0] = '\0';
 		for (int m = 0; m < 4; m++)
 		{
@@ -46,6 +51,7 @@ int	test_flags(void)
 				specs_one_long(format, n[i]);
 			}
 		}
+		printf("\n");
 	}
 	return (0);
 }

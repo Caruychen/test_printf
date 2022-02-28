@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/27 09:08:41 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/28 11:44:29 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <fcntl.h>
 # include <limits.h>
 
+void	print_title(const char *str);
 int		file_open(char *name);
 void	vdprintf_wrap(const char *format, ...);
 void	init_redirect(int *file_desc, int *copy_out);

@@ -6,13 +6,13 @@
 #    By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:19:44 by cchen             #+#    #+#              #
-#    Updated: 2022/02/26 21:51:12 by cchen            ###   ########.fr        #
+#    Updated: 2022/02/28 10:09:48 by cchen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := test_printf
-#PRINTF_DIR := /Users/cchen/workspace/10_Printf
-PRINTF_DIR := /Users/caruychen/Hive/42Hive-ft_printf
+PRINTF_DIR := /Users/cchen/workspace/10_Printf
+#PRINTF_DIR := /Users/caruychen/Hive/42Hive-ft_printf
 FT_PRINTF := libftprintf.a
 
 CC := gcc
