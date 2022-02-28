@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:04:37 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/28 12:23:07 by cchen            ###   ########.fr       */
+/*   Updated: 2022/02/28 13:34:06 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	set_two_format(char *format, char *mod1, char *spec1, char *mod2, ch
 	strcpy(c1, mod1);
 	strcat(c1, spec1);
 	strcpy(c2, mod2);
-	strcpy(c2, spec2);
+	strcat(c2, spec2);
 	strcpy(format, "Testing ");
 	strcat(format, c1);
 	strcat(format, " ");
@@ -73,17 +73,21 @@ static void	cycle_two_arg(long long *n, char **mods, char **specs)
 	char	format[42];
 	for (int i = 0; i < 15; i++)
 	{
+		if (i < 14)
+			printf("Testing on %lld\n", n[i]);
+		else
+			printf("Testing on %llu\n", n[i]);
 		format[0] = '\0';
 		for (int m = 0; m < 4; m++)
 		{
 			for (int s = 0; s < 6; s++)
 			{
-				set_two_format(format, mods[m], specs[s], mods[m], specs[5 - s]);
+				set_two_format(format, mods[m], specs[s], mods[3-m], specs[5-s]);
 				specs_two_long(format, n[i], n[i]);
 			}
 		}
+		printf("\n");
 	}
-	printf("\n");
 }
 
 int	test_flags(void)
@@ -94,8 +98,9 @@ int	test_flags(void)
 	char	*specs[] = {"d","i","o","u","x","X"};;
 
 	print_title("--- Length Modifier Tests ---\n");
-	printf("Testing integer conversions with modifers, at all Number limits:\n");
+	printf("Testing single integer conversions with modifiers, at all Number limits:\n");
 	cycle_single_arg(n, mods, specs);
-	//cycle_two_arg(n, mods, specs);
+	printf("\nTesting two integer conversion with modifiers, at all Number limits:\n");
+	cycle_two_arg(n, mods, specs);
 	return (0);
 }
