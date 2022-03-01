@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/01 12:56:03 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/01 16:06:11 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	test_basic(void)
 	test_numbers();
 
 	printf("\nTesting floating points:\n");
-	printf("%lf\n", 42.42);
+	printf("%f\n", 42.42222222);
 	ft_printf("%f\n", 42.42);
 	double x = 0xffffffffffff;
 	printf("%f\n", x);
