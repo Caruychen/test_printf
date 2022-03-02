@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/28 12:00:09 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/02 09:51:32 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <limits.h>
+# include <float.h>
 
 void	print_title(const char *str);
 int		file_open(char *name);
