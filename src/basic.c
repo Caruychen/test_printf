@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/02 11:22:47 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/04 16:49:27 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,17 @@ void	test_floats_doubles(void)
 {
 	printf("%f\n", 42.42);
 	ft_printf("%f\n", 42.42);
-	printf("%f\n", DBL_MAX);
-	ft_printf("%f\n", DBL_MAX);
 	ft_printf("%f\n", 2.3);
+	ft_printf("%f\n", 1.2);
+	ft_printf("%f\n", -42.42);
+	ft_printf("%f\n", 9.9999997);
+	printf("%f\n", 9.9999997);
+	ft_printf("%f\n", 2.5555545f);
+	printf("%f\n", 2.5555545f);
+	ft_printf("%f\n", 3.55);
+	printf("%f\n", 3.55);
+	ft_printf("%f\n", 3.55 / 1.5);
+	printf("%f\n", 3.55 / 1.5);
 }
 
 int	test_basic(void)
