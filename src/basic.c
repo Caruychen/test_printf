@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/04 16:49:27 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/06 09:16:39 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,16 @@ void	test_numbers(void)
 
 void	test_floats_doubles(void)
 {
-	printf("%f\n", 42.42);
-	ft_printf("%f\n", 42.42);
-	ft_printf("%f\n", 2.3);
-	ft_printf("%f\n", 1.2);
-	ft_printf("%f\n", -42.42);
-	ft_printf("%f\n", 9.9999997);
-	printf("%f\n", 9.9999997);
-	ft_printf("%f\n", 2.5555545f);
-	printf("%f\n", 2.5555545f);
-	ft_printf("%f\n", 3.55);
-	printf("%f\n", 3.55);
-	ft_printf("%f\n", 3.55 / 1.5);
-	printf("%f\n", 3.55 / 1.5);
+	specs_one_dbl("f conversion: %f\n", 42.42);
+	specs_one_dbl("f conversion: %f\n", 2.3);
+	specs_one_dbl("f conversion: %f\n", 1.2);
+	specs_one_dbl("f conversion: %f\n", -42.42);
+	specs_one_dbl("f conversion: %f\n", 9.9999997);
+	specs_one_dbl("f conversion: %f\n", 9.999999);
+	specs_one_dbl("f conversion: %f\n", 9.9999999);
+	specs_one_dbl("f conversion: %f\n", 2.5555545f);
+	specs_one_dbl("f conversion: %f\n", 3.55);
+	specs_one_dbl("f conversion: %f\n", 3.55 / 1.5);
 }
 
 int	test_basic(void)
