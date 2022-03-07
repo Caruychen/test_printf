@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 14:57:01 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/07 20:14:06 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	reset_output(int *file_desc, int *copy_out);
 int	test_basic(void);
 int	test_lengths(void);
 int	test_flags(void);
+int	test_precision(void);
 void	specs_none(const char *format);
 void	specs_one_char(const char *format, const char c);
 void	specs_two_char(const char *format, const char c1, const char c2);

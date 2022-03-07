@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 11:44:45 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/07 21:57:40 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int	test_basic(void)
 	specs_one_str("1 String arg: %s\n", "Hello World");
 	specs_two_str("2 String args: %s, %s\n", "s1", "s2");
 	specs_two_str("2 String args: %s, %s", "s1", "s2");
+	specs_one_str("1 String arg: %s\n", NULL);
 	specs_one_ptr("p conversion\t%p\n", NULL);
 	specs_one_ptr("p conversion\t%p", addr);
 
