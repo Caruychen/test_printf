@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 20:12:40 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 22:10:39 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/07 22:32:27 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	test_precision(void)
 	specs_one_dbl("Test .1f: %.1f\n", 42.42);
 	specs_one_dbl("Test .2f: %.2f\n", 42.42);
 	specs_one_dbl("Test .4f: %.4f\n", 42.42);
+	specs_one_dbl("Test .8f: %.8f\n", 42.42);
 	specs_one_str("Test .s: %.s\n", "Hello");
 	specs_one_str("Test .2s: %.2s\n", "Hello");
 	specs_one_str("Test .5s: %.5s\n", "Hello");
