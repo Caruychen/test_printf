@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/06 09:16:39 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/07 11:44:45 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,15 @@ void	test_floats_doubles(void)
 	specs_one_dbl("f conversion: %f\n", 9.9999997);
 	specs_one_dbl("f conversion: %f\n", 9.999999);
 	specs_one_dbl("f conversion: %f\n", 9.9999999);
-	specs_one_dbl("f conversion: %f\n", 2.5555545f);
 	specs_one_dbl("f conversion: %f\n", 3.55);
 	specs_one_dbl("f conversion: %f\n", 3.55 / 1.5);
+	specs_one_dbl("f conversion: %f\n", 2.5555505f);
+	specs_one_dbl("f conversion: %f\n", 2.5555515f);
+	specs_one_dbl("f conversion: %f\n", 2.5555525f);
+	specs_one_dbl("f conversion: %f\n", 2.5555535f);
+	specs_one_dbl("f conversion: %f\n", 2.5555545f);
+	specs_one_dbl("f conversion: %f\n", 2.5555555f);
+	specs_one_dbl("f conversion: %f\n", 2.5555565f);
 }
 
 int	test_basic(void)

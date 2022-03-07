@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:04:37 by cchen             #+#    #+#             */
-/*   Updated: 2022/02/28 13:34:06 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/07 14:56:40 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,35 @@ static void	cycle_two_arg(long long *n, char **mods, char **specs)
 	}
 }
 
-int	test_flags(void)
+static void	test_doubles_l(void)
+{
+	specs_one_dbl("lf conversion: %lf\n", 42.42);
+	specs_one_dbl("lf conversion: %lf\n", 2.3);
+	specs_one_dbl("lf conversion: %lf\n", 1.2);
+	specs_one_dbl("lf conversion: %lf\n", -42.42);
+	specs_one_dbl("lf conversion: %lf\n", 9.9999997);
+	specs_one_dbl("lf conversion: %lf\n", 9.999999);
+	specs_one_dbl("lf conversion: %lf\n", 9.9999999);
+	specs_one_dbl("lf conversion: %lf\n", 2.5555545f);
+	specs_one_dbl("lf conversion: %lf\n", 3.55);
+	specs_one_dbl("lf conversion: %lf\n", 3.55 / 1.5);
+
+	specs_one_Ldbl("Lf conversion: %Lf\n", 42.42L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 2.3L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 1.2L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", -42.42L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 9.9999997L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 9.999999L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 9.9999999L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 2.5555525L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 2.5555535L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 2.5555545L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 2.5555555L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 3.55L);
+	specs_one_Ldbl("Lf conversion: %Lf\n", 3.55L / 1.5L);
+}
+
+int	test_lengths(void)
 {
 	long long	n[] = {LONG_MIN, INT_MIN, SHRT_MIN, CHAR_MIN,
 			-1, 0 , 1, CHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX, UCHAR_MAX, USHRT_MAX, UINT_MAX, ULONG_MAX};
@@ -102,5 +130,7 @@ int	test_flags(void)
 	cycle_single_arg(n, mods, specs);
 	printf("\nTesting two integer conversion with modifiers, at all Number limits:\n");
 	cycle_two_arg(n, mods, specs);
+	printf("\nTesting float conversions with length modifiers:\n");
+	test_doubles_l();
 	return (0);
 }

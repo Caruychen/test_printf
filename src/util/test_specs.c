@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:53:30 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/06 09:17:06 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/07 11:10:49 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,18 @@ void	specs_two_long(const char *format, const long n1, const long n2)
 }
 
 void	specs_one_dbl(const char *format, const double dbl)
+{
+	int	file_desc;
+	int	copy_out;
+
+	init_redirect(&file_desc, &copy_out);
+	ft_printf(format, dbl);
+	reset_output(&file_desc, &copy_out);
+	vdprintf_wrap(format, dbl);
+	system("scripts/compare.sh");
+}
+
+void	specs_one_Ldbl(const char *format, const long double dbl)
 {
 	int	file_desc;
 	int	copy_out;

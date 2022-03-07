@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   flags.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 11:17:11 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 17:09:53 by cchen            ###   ########.fr       */
+/*   Created: 2022/03/07 14:38:33 by cchen             #+#    #+#             */
+/*   Updated: 2022/03/07 16:54:32 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-int	main(void)
+int	test_flags(void)
 {
-	test_basic();
-	test_lengths();
-	test_flags();
+	specs_one_int("Test #o flag: %#o\n", 42);
+	specs_one_int("Test ##o flag: %##o\n", 42);
+	specs_one_int("Test 0o flag: %0o\n", 42);
+	specs_one_int("Test #0o flag: %#0o\n", 42);
+	specs_one_int("Test #x flag: %#x\n", 42);
+	specs_one_int("Test #x flag: %#x\n", 42);
 	return (0);
 }
