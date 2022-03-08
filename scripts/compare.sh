@@ -7,7 +7,7 @@ NC="\033[0m"
 COMPARE_FILES(){
 	arg1=$1
 	arg2=$2
-	result=$(diff $arg1 $arg2)
+	result=$(diff $arg1 $arg2 | cat -e)
 	if [[ -n "$result" ]]
 	then
 		echo -n "${RED}[ NOT OK! ]${NC} "
