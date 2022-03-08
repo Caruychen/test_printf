@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 20:12:40 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 22:32:27 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/08 12:06:08 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,8 @@ int	test_precision(void)
 	specs_one_str("Test .5s: %.5s\n", "Hello");
 	specs_one_str("Test .8s: %.8s\n", "Hello");
 	specs_one_str("Test .2s: %.2s\n", (char *)NULL);
+	specs_two_int("@moulitest: %#.x %#.0x", 0, 0);
+	specs_two_int("@moulitest: %.x %.0x", 0, 0);
+	specs_two_int("@moulitest: %5.x %5.0x", 0, 0);
 	return (0);
 }
