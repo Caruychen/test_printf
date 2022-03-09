@@ -6,11 +6,24 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 10:01:03 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/08 13:38:14 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/09 10:54:05 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
+static void	test_widths_str(void)
+{
+	printf("\nTesting field width spec on strings\n");
+	specs_one_str("%10s is a string\n", "this");
+	specs_one_str("%5.2s is a string", "this");
+	specs_one_str("%10s is a string", "");
+	specs_one_str("%5.2s is a string", "");
+	specs_one_str("%-10s is a string", "this");
+	specs_one_str("%-5.2s is a string", "this");
+	specs_one_str("%-10s is a string", "");
+	specs_one_str("%-5.2s is a string", "");
+}
 
 int	test_widths(void)
 {
@@ -45,5 +58,6 @@ int	test_widths(void)
 	specs_one_dbl("%-15f\n", 42.42);
 	specs_one_dbl("%-15.7f\n", 42.42);
 	specs_one_dbl("%-15.0f\n", 42.42);
+	test_widths_str();
 	return (0);
 }

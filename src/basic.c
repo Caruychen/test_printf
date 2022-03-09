@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 21:57:40 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/09 11:29:30 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void	test_numbers(void)
 {
-	long long	n[] = {LONG_MIN, INT_MIN, SHRT_MIN, CHAR_MIN,
+	long long	n[] = {LONG_MIN, INT_MIN, SHRT_MIN, CHAR_MIN, -42,
 			-1, 0 , 1, CHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX, UCHAR_MAX, USHRT_MAX, UINT_MAX, ULONG_MAX};
 
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 16; i++)
 	{
 		specs_one_int("d conversion:\t%d\n", n[i]);
 		specs_one_int("i conversion:\t%i\n", n[i]);

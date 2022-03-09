@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:04:37 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/07 14:56:40 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/09 11:31:03 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	set_two_format(char *format, char *mod1, char *spec1, char *mod2, ch
 static void	cycle_single_arg(long long *n, char **mods, char **specs)
 {
 	char	format[42];
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 16; i++)
 	{
 		if (i < 14)
 			printf("Testing on %lld\n", n[i]);
@@ -71,7 +71,7 @@ static void	cycle_single_arg(long long *n, char **mods, char **specs)
 static void	cycle_two_arg(long long *n, char **mods, char **specs)
 {
 	char	format[42];
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 16; i++)
 	{
 		if (i < 14)
 			printf("Testing on %lld\n", n[i]);
@@ -120,7 +120,7 @@ static void	test_doubles_l(void)
 
 int	test_lengths(void)
 {
-	long long	n[] = {LONG_MIN, INT_MIN, SHRT_MIN, CHAR_MIN,
+	long long	n[] = {LONG_MIN, INT_MIN, SHRT_MIN, CHAR_MIN, -42,
 			-1, 0 , 1, CHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX, UCHAR_MAX, USHRT_MAX, UINT_MAX, ULONG_MAX};
 	char	*mods[] = {"hh","h","l","ll"};
 	char	*specs[] = {"d","i","o","u","x","X"};;
