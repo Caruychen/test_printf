@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/09 11:29:30 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/09 21:19:39 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,11 @@ int	test_basic(void)
 	specs_none("");
 	specs_none("Hello World\n");
 
+	specs_one_int("test: % d\n", 42);
+	specs_one_int("test: % +d\n", 42);
+	specs_one_str("test: % st\n", "");
+	specs_one_str("test: % st\n", "test");
+	specs_one_int("test: % d\n", -42);
 	printf("\nTesting chars, strings, pointers:\n");
 	specs_one_char("1 c conversion: %c\n", 'c');
 	specs_two_char("2 c conversion: %c %c\n", 'a', 'b');
