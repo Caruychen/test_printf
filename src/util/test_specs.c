@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:53:30 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/08 12:07:32 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/10 12:42:17 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,18 @@ void	specs_one_ptr(const char *format, const void *p)
 	ft_printf(format, p);
 	reset_output(&file_desc, &copy_out);
 	vdprintf_wrap(format, p);
+	system("scripts/compare.sh");
+}
+
+void	specs_two_ptr(const char *format, const void *p1, const void *p2)
+{
+	int	file_desc;
+	int	copy_out;
+
+	init_redirect(&file_desc, &copy_out);
+	ft_printf(format, p1, p2);
+	reset_output(&file_desc, &copy_out);
+	vdprintf_wrap(format, p1, p2);
 	system("scripts/compare.sh");
 }
 

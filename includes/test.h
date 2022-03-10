@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/08 12:07:44 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/10 12:42:26 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	specs_two_str(const char *format, const char *s1, const char *s2);
 void	specs_one_int(const char *format, const int n);
 void	specs_two_int(const char *format, const int n1, const int n2);
 void	specs_one_ptr(const char *format, const void *p);
+void	specs_two_ptr(const char *format, const void *p1, const void *p2);
 void	specs_one_long(const char *format, const long n);
 void	specs_two_long(const char *format, const long n1, const long n2);
 void	specs_one_dbl(const char *format, const double dbl);
