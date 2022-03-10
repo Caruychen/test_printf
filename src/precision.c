@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 20:12:40 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/10 00:18:34 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/10 08:37:02 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,19 @@ int	test_precision(void)
 	specs_one_str("Test .5s: %.5s\n", "Hello");
 	specs_one_str("Test .8s: %.8s\n", "Hello");
 	specs_one_str("Test .2s: %.2s\n", (char *)NULL);
-	specs_two_int("@moulitest: %#d %#.d", 0, 0);
-	specs_two_int("@moulitest: %#x %#.x", 0, 0);
-	specs_two_int("@moulitest: %x %.x", 0, 0);
-	specs_two_int("@moulitest: %#.x %#.0x", 0, 0);
-	specs_two_int("@moulitest: %#.o %#.0o", 0, 0);
-	specs_two_int("@moulitest: %.x %.0x", 0, 0);
-	specs_two_int("@moulitest: %.o %.0o", 0, 0);
-	specs_two_int("@moulitest: %5.x %5.0x", 0, 0);
-	specs_two_int("@moulitest: %5.o %5.0o", 0, 0);
+	specs_two_int("@moulitest #d #.d: %#d %#.d", 0, 0);
+	specs_two_int("@moulitest #x #.x: %#x %#.x", 0, 0);
+	specs_two_int("@moulitest x .x: %x %.x", 0, 0);
+	specs_two_int("@moulitest #.x #.0x: %#.x %#.0x", 0, 0);
+	specs_two_int("@moulitest #.o #.0o: %#.o %#.0o", 0, 0);
+	specs_two_int("@moulitest .x .0x: %.x %.0x", 0, 0);
+	specs_two_int("@moulitest .o .0o: %.o %.0o", 0, 0);
+	specs_two_int("@moulitest 5.x 5.0x: %5.x %5.0x", 0, 0);
+	specs_two_int("@moulitest 5.o 5.0o: %5.o %5.0o", 0, 0);
+	specs_two_int("@moulitest .5x 5.5x: %.5x %5.5x", 0, 0);
+	specs_two_int("@moulitest .5o 5.5o: %.5o %5.5o", 0, 0);
+	specs_two_int("@moulitest #.5x #5.5x: %#.5x %#5.5x", 0, 0);
+	specs_two_int("@moulitest #.5o #5.5o: %#.5o %#5.5o", 0, 0);
 	specs_one_int("@moulitest: %.10d", -42);
 	specs_one_int("@moulitest: %20.10d", -42);
 	specs_one_int("@moulitest: %020.10d", -42);
