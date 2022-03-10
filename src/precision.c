@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 20:12:40 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/10 12:57:55 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/10 17:00:35 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,18 @@ static void	prec_char(void)
 	specs_one_int("@moulitest: %020.10hhd", -42);
 	specs_one_int("Test 05hhd: %05hhd", -42);
 	specs_one_int("Test 0 5hhd: %0 5hhd", 42);
+	specs_one_int("Test -5.0hhd: %-5.0hhd", 0);
+	specs_one_int("Test -5.hhd: %-5.hhd", 0);
+	specs_one_int("Test -5.0hhi: %-5.0hhi", 0);
+	specs_one_int("Test -5.hhi: %-5.hhi", 0);
+	specs_one_int("Test -5.0hho: %-5.0hho", 0);
+	specs_one_int("Test -5.hho: %-5.hho", 0);
+	specs_one_int("Test -5.0hhu: %-5.0hhu", 0);
+	specs_one_int("Test -5.hhu: %-5.hhu", 0);
+	specs_one_int("Test -5.0hhx: %-5.0hhx", 0);
+	specs_one_int("Test -5.hhx: %-5.hhx", 0);
+	specs_one_int("Test -5.0hhX: %-5.0hhX", 0);
+	specs_one_int("Test -5.hhX: %-5.hhX", 0);
 }
 
 static void	prec_short(void)
@@ -66,6 +78,18 @@ static void	prec_short(void)
 	specs_one_int("@moulitest: %020.10hd", -42);
 	specs_one_int("Test 05hd: %05hd", -42);
 	specs_one_int("Test 0 5hd: %0 5hd", 42);
+	specs_one_int("Test -5.0hd: %-5.0hd", 0);
+	specs_one_int("Test -5.hd: %-5.hd", 0);
+	specs_one_int("Test -5.0hi: %-5.0hi", 0);
+	specs_one_int("Test -5.hi: %-5.hi", 0);
+	specs_one_int("Test -5.0ho: %-5.0ho", 0);
+	specs_one_int("Test -5.ho: %-5.ho", 0);
+	specs_one_int("Test -5.0hu: %-5.0hu", 0);
+	specs_one_int("Test -5.hu: %-5.hu", 0);
+	specs_one_int("Test -5.0hx: %-5.0hx", 0);
+	specs_one_int("Test -5.hx: %-5.hx", 0);
+	specs_one_int("Test -5.0hX: %-5.0hX", 0);
+	specs_one_int("Test -5.hX: %-5.hX", 0);
 }
 
 static void	prec_int(void)
@@ -99,6 +123,18 @@ static void	prec_int(void)
 	specs_one_int("@moulitest: %020.10d", -42);
 	specs_one_int("Test 05d: %05d", -42);
 	specs_one_int("Test 0 5d: %0 5d", 42);
+	specs_one_int("Test -5.0d: %-5.0d", 0);
+	specs_one_int("Test -5.d: %-5.d", 0);
+	specs_one_int("Test -5.0i: %-5.0i", 0);
+	specs_one_int("Test -5.i: %-5.i", 0);
+	specs_one_int("Test -5.0o: %-5.0o", 0);
+	specs_one_int("Test -5.o: %-5.o", 0);
+	specs_one_int("Test -5.0u: %-5.0u", 0);
+	specs_one_int("Test -5.u: %-5.u", 0);
+	specs_one_int("Test -5.0x: %-5.0x", 0);
+	specs_one_int("Test -5.x: %-5.x", 0);
+	specs_one_int("Test -5.0X: %-5.0X", 0);
+	specs_one_int("Test -5.X: %-5.X", 0);
 }
 
 static void	prec_long(void)
@@ -132,6 +168,18 @@ static void	prec_long(void)
 	specs_one_long("@moulitest: %020.10ld", -42);
 	specs_one_long("Test 05ld: %05ld", -42);
 	specs_one_long("Test 0 5ld: %0 5ld", 42);
+	specs_one_long("Test -5.0ld: %-5.0ld", 0);
+	specs_one_long("Test -5.ld: %-5.ld", 0);
+	specs_one_long("Test -5.0li: %-5.0li", 0);
+	specs_one_long("Test -5.ldi %-5.li", 0);
+	specs_one_long("Test -5.0lo: %-5.0lo", 0);
+	specs_one_long("Test -5.ldo %-5.lo", 0);
+	specs_one_long("Test -5.0lu: %-5.0lu", 0);
+	specs_one_long("Test -5.ldu %-5.lu", 0);
+	specs_one_long("Test -5.0lx: %-5.0lx", 0);
+	specs_one_long("Test -5.ldx %-5.lx", 0);
+	specs_one_long("Test -5.0lX: %-5.0lX", 0);
+	specs_one_long("Test -5.ldX %-5.lX", 0);
 }
 
 int	test_precision(void)

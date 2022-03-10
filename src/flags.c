@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 14:38:33 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/10 13:01:57 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/10 16:54:33 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ int	test_flags(void)
 	specs_one_int("Test #-08x: %#-08x", 42);
 	specs_one_int("Test #-08X: %#-08X", 42);
 	specs_one_long("Test #llx: %#llx", 9223372036854775807);
-	specs_one_int("{%+03d}", 0);
+	specs_one_int("Test {+03d}: {%+03d}", 0);
+	specs_one_int("Test { 03d}: {% 03d}", 0);
+	specs_one_int("Test {0-3d}: {%0-3d}", 0);
+	specs_one_int("Test 03d: %03d", 0);
+	specs_one_int("Test 03i: %03i", 0);
 	return (0);
 }
