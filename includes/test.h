@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:35:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/10 12:42:26 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/11 15:43:56 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ void	specs_one_long(const char *format, const long n);
 void	specs_two_long(const char *format, const long n1, const long n2);
 void	specs_one_dbl(const char *format, const double dbl);
 void	specs_one_Ldbl(const char *format, const long double dbl);
+void	specs_db_ldb_Ldb(const char *format, const double dbl1, const double dbl2,
+		const long double dbl3);
 
 #endif
