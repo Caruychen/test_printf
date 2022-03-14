@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 09:24:53 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/14 11:17:36 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/14 14:18:14 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	test_wildcards(void)
 	specs_three_int("%*.*d", 0, 3, 0);
 
 	printf("\nTesting mixed spec flags wildcard specifiers\n");
-	specs_two_int("{%*3d}", 5, 0);
-	specs_two_int("{%05.*d}", -15, 42);
+	specs_two_int("Test *3d positive {%*3d}", 5, 0);
+	specs_two_int("Test 05.*d negative {%05.*d}", -15, 42);
+	specs_two_int("Test 05.*d positive {%05.*d}", 15, 42);
 }
