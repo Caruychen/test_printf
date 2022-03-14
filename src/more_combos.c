@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 20:48:45 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/14 22:02:50 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/14 23:04:55 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	test_more(void)
 
 	printf("\nTesting additional option combinations and edge cases\n");
 	specs_two_int("Test { -1.0d} { -1.0i}: % -1.0d, % -1.0i", 0, 0);
+	specs_one_int("Test %%#-1.0o: {%#-1.0o}", 0);
+	specs_one_int("Test %%#-1.0u: {%#-1.0u}", 0);
+	specs_one_int("Test %%#-1.0x: {%#-1.0x}", 0);
+	specs_one_int("Test %%#-1.0X: {%#-1.0X}", 0);
 	specs_db_ldb_Ldb("Test %%#.f %%#.0f %%#.15Lf: %#.f %#.0f %#.15Lf\n", dbl, dbl, dbl);
 	specs_one_dbl("Test %.f\n",dbl);
 	specs_one_dbl("Test %%0 f: {%0 f}\n", dbl);
