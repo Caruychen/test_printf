@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 10:01:03 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/11 15:13:43 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/14 17:19:48 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int	test_widths(void)
 	specs_one_int("Test -3x: %-3x", 0);
 	specs_one_int("Test 3X: %3X", 0);
 	specs_one_int("Test -3X: %-3X", 0);
+	specs_two_int("Test { -1.0d} { -1.0i}: % -1.0d, % -1.0i", 0, 0);
 	test_widths_str();
 	return (0);
 }
