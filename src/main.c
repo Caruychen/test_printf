@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 11:17:11 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/14 14:57:20 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/14 22:03:31 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ int	main(void)
 	test_precision();
 	test_widths();
 	test_wildcards();
+	test_more();
 	return (0);
 }
