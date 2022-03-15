@@ -6,7 +6,7 @@
 /*   By: cchen <cchen@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:23:35 by cchen             #+#    #+#             */
-/*   Updated: 2022/03/11 16:03:03 by cchen            ###   ########.fr       */
+/*   Updated: 2022/03/15 21:47:04 by cchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,14 @@ void	test_floats_doubles(void)
 	specs_one_dbl("f conversion: %f\n", 2.5555545f);
 	specs_one_dbl("f conversion: %f\n", 2.5555555f);
 	specs_one_dbl("f conversion: %f\n", 2.5555565f);
+	specs_one_dbl("f conversion: %f\n", 2.5555534f);
+	specs_one_dbl("f conversion: %f\n", 2.5555544f);
+	specs_one_dbl("f conversion: %f\n", 2.5555554f);
+	specs_one_dbl("f conversion: %f\n", 2.5555564f);
+	specs_one_dbl("f conversion: %f\n", 2.5555536f);
+	specs_one_dbl("f conversion: %f\n", 2.5555546f);
+	specs_one_dbl("f conversion: %f\n", 2.5555556f);
+	specs_one_dbl("f conversion: %f\n", 2.5555566f);
 	specs_db_ldb_Ldb("{%f}{%lf}{%Lf}", 1444565444646.6465424242242, 1444565444646.6465424242242, 1444565444646.6465424242242l);
 	specs_db_ldb_Ldb("{%f}{%lf}{%Lf}", -1444565444646.6465424242242454654, -1444565444646.6465424242242454654, -1444565444646.6465424242242454654l);
 }
