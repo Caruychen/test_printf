@@ -11,6 +11,10 @@ COMPARE_FILES(){
 	if [[ -n "$result" ]]
 	then
 		echo -n "${RED}[ NOT OK! ]${NC} "
+		echo "\nResulting diff output format:"
+		echo "< Standard C printf results"
+		echo "---"
+		echo "> ft_printf results\n"
 		echo $result
 	else
 		echo -n "${GREEN}[ OK! ]${NC} "
